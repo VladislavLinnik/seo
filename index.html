@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SEO</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) auto;
+            grid-column-gap: 15px;
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+        }
+        .item .title {
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        .item .textarea {
+            min-height: 200px;
+            resize: none;
+        }
+        .button {
+            height: 205px;
+            align-self: end;
+        }
+        .checkbox {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .checkbox label {
+            margin-right: 15px;
+            font-size: 24px;
+            text-transform: uppercase;
+            user-select: none;
+            cursor: pointer;
+        }
+        .checkbox input {
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="grid">
+    <div class="item">
+        <p class="title">Не очищенный</p>
+        <textarea id="notCleared" class="textarea" autofocus></textarea>
+    </div>
+    <div class="item">
+        <p class="title">Очищенный</p>
+        <textarea id="cleared" class="textarea"></textarea>
+    </div>
+    <div class="item">
+        <p class="title">Итог</p>
+        <textarea id="total" class="textarea" readonly tabindex="-1"></textarea>
+    </div>
+    <button id="generate" class="button">Сгенерировать</button>
+</div>
+<div class="checkbox">
+    <label for="fullWord">Показать полностью:</label>
+    <input type="checkbox" id="fullWord">
+</div>
+<script src="script.js"></script>
+</body>
+</html>
